@@ -165,3 +165,22 @@ main {
     border-radius: 50%;
     z-index: 1001; /* 确保关闭按钮在视频播放器之上 */
 }
+
+
+/* 新增放大效果的样式 */
+.zoom-in {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 点击图片后放大 */
+.details-images img.zoomed {
+    transform: scale(1.5); /* 例如放大1.5倍 */
+    z-index: 1000;
+}
