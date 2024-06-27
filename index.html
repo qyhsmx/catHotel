@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 <body>
     <header>
-        <h1>Cat Gallery</h1>
+        <h1>猫咪客栈</h1>
     </header>
     <main>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="cat1.jpg" alt="Cat 1">
-                <p>Price: $100</p>
+                <a href="details.html?id=1" class="gallery-link">
+                    <img src="皮皮.jpg" alt="Cat 1">
+                </a>
+                <p>皮皮</p>
             </div>
             <div class="gallery-item">
-                <video src="cat2.mp4" controls></video>
-                <p>Price: $200</p>
+                <a href="details.html?id=2" class="gallery-link">
+                    <img src="静静.jpg" alt="Cat 2">
+                </a>
+                <p>静静</p>
             </div>
             <!-- 继续添加更多画廊项 -->
         </div>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f06, #48f);
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.details-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.details-images img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.details-images img.fade-in {
+    opacity: 1;
+}
+
+.details-description {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-videos.hidden {
+    display: none;
+}
+
+.details-videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.details-videos video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 美化按钮样式 */
+.styled-button {
+    background-color: #48f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.styled-button:hover {
+    background-color: #357ae8;
+    transform: scale(1.05);
+}
+
+.styled-button:active {
+    background-color: #2851a3;
+    transform: scale(0.95);
+}

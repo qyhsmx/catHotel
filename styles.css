@@ -24,10 +24,12 @@ main {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    justify-content: center;
+    justify-items: center;
+    width: 90%;
+    margin: auto;
 }
 
 .gallery-item {
@@ -37,8 +39,17 @@ main {
     text-align: center;
 }
 
-.gallery-item img, .gallery-item video {
-    max-width: 200px;
+.gallery-item img {
+    max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.gallery-link {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-link:hover {
+    transform: scale(1.05);
 }

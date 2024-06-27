@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫咪详细</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <header>
+        <h1>猫咪详细</h1>
+    </header>
+    <main>
+        <div class="details">
+            <div class="details-images">
+                <img src="皮皮.jpg" alt="Cat 1" class="fade-in">
+                <img src="静静.jpg" alt="Cat 1" class="fade-in">
+                <!-- 更多图片 -->
+            </div>
+            <div class="details-description">
+                <p>价格: 1500</p>
+                <p>名称: 皮皮</p>
+                <p>最活泼的一个</p>
+                <button id="show-videos-btn" class="styled-button">查看视频</button>
+            </div>
+            <div class="details-videos hidden">
+                <video src="皮皮.mp4" controls></video>
+                <!-- 更多视频 -->
+            </div>
+        </div>
+    </main>
+    <script src="details.js"></script>
+</body>
+</html>
