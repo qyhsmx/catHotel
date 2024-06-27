@@ -24,12 +24,14 @@
                 <p>最活泼的一个</p>
                 <button id="show-videos-btn" class="styled-button">查看视频</button>
             </div>
-            <div class="details-videos hidden">
-                <video src="皮皮.mp4" controls></video>
-                <!-- 更多视频 -->
-            </div>
         </div>
     </main>
+    <div id="video-modal" class="video-modal hidden">
+        <div class="video-container">
+            <span id="close-video-btn">&times;</span>
+            <video id="floating-video" src="皮皮.mp4" controls></video>
+        </div>
+    </div>
     <script src="details.js"></script>
 </body>
 </html>

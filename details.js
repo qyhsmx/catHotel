@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const showVideosBtn = document.getElementById('show-videos-btn');
-    const videosSection = document.querySelector('.details-videos');
+    const videoModal = document.getElementById('video-modal');
+    const closeVideoBtn = document.getElementById('close-video-btn');
+    const floatingVideo = document.getElementById('floating-video');
 
     showVideosBtn.addEventListener('click', () => {
-        videosSection.classList.toggle('hidden');
+        videoModal.classList.remove('hidden');
+        floatingVideo.play();
+    });
+
+    closeVideoBtn.addEventListener('click', () => {
+        videoModal.classList.add('hidden');
+        floatingVideo.pause();
+        floatingVideo.currentTime = 0;  // 重置视频到开头
     });
 
     // 图片淡入效果

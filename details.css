@@ -4,7 +4,6 @@ body {
     padding: 0;
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
     animation: fadeIn 1s ease-in;
 }
 
@@ -23,17 +22,26 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* 调整背景透明度 */
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    backdrop-filter: blur(5px); /* 添加模糊效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff; /* 确保文字颜色为白色 */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 添加阴影效果 */
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* 修改为列方向 */
     min-height: 80vh;
 }
 
@@ -114,4 +122,46 @@ main {
 .styled-button:active {
     background-color: #2851a3;
     transform: scale(0.95);
+}
+
+/* 浮动视频样式 */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-modal.hidden {
+    display: none;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#close-video-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 1001; /* 确保关闭按钮在视频播放器之上 */
 }
